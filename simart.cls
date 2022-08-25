@@ -70,13 +70,19 @@
 %----------------------------------------------------------------------------------------
 % PREAMBLE OF TABLE AND LIST
 
-\usepackage{tabularx}
 \usepackage{booktabs} % Required for better horizontal rules in tables
-%\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{multirow}
+
+\usepackage{dcolumn} % pretty column descr R crosstab2tex
+\newcolumntype{d}{D{.}{.}{-1}}
 
 \usepackage{paralist} %Inline list(inparaenum), always on top of enumitem
-%\usepackage{longtable} % Enable table cross multiple page
-%\usepackage{array} %Mostly formatting columns and spacing
+\usepackage{longtable} % Enable table cross multiple page
+\usepackage{array} %Mostly formatting columns and spacing
+\usepackage{diagbox} % diagonal line on table
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}} %centering elemen in table
+\newcolumntype{R}[1]{>{\columncolor{gray}}p{#1}} %centering elemen in table
 \usepackage{enumitem} % Required for list customisation
 
 \setlist{noitemsep} % No spacing between list items
@@ -122,7 +128,7 @@
 %----------------------------------------------------------------------------------------
 % CONFIGURATION OF TEXT(PARAGRAPH, SECTION, DATE, OTHERS)
 
-
+\usepackage{comment}
 \usepackage{lipsum} % Add  dummy text
 \usepackage[hidelinks]{hyperref}
 \usepackage{setspace} %Alter spacing in paragraph
